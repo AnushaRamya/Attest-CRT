@@ -8,37 +8,34 @@ import test.attest360.testCases.BaseClass;
 
 public class LoginPage extends BaseClass{
 	public LoginPage() {
-     PageFactory.initElements(driver, this);
-	} 
-	 @FindBy(id="j_username")
-	 WebElement txtuser;
-	 @FindBy(id="loginPassword")
-	 WebElement txtpass;
-	 @FindBy (xpath="//button[text()='Login']")
-	 WebElement btnlogin;
-	 @FindBy (xpath="//li/a[text()=' Logout']")
-	 WebElement btnlogout;
-	
-	 
-	 public void setUserName(String username) 
-	 {
-		txtuser.clear();
-		txtuser.sendKeys(username);
-	 }
-	 public void setPassword(String pass) 
-	 {
-		txtpass.clear();
-		txtpass.sendKeys(pass);
-	 }
-	 public void clickLogin()
-	 {
-		btnlogin.click();
-	 }
-	 public void clickLogout()
-	 {
-		 btnlogout.click();
-	 }
-	 
-	 
+		PageFactory.initElements(driver, this);
+	}
 
+	@FindBy (id="username")
+	WebElement newuser;
+	@FindBy (id="loginPassword")
+	WebElement newpass;
+	@FindBy (xpath="//button[text()='Login']")
+	WebElement btnlogin;
+	@FindBy (id="userSilhouette")
+	WebElement uprofile;
+	@FindBy (xpath="//div[@class='dropdown-menu dropdown-menu-end profile-dropdown show']//span[contains(text(),'Logout')]")
+	WebElement logout;
+
+	public void setNewUser(String username) {
+		newuser.clear();
+		newuser.sendKeys(username);
+	}
+	public void setNewPassword(String pass) {
+		newpass.clear();
+		newpass.sendKeys(pass);
+	}
+	public void clickLogin() {
+		btnlogin.click();
+	}
+	public void clickprofileLogout() throws InterruptedException{
+		uprofile.click();
+		Thread.sleep(500);
+		logout.click();
+	}
 }

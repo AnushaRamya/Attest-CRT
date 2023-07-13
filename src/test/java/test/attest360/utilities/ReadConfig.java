@@ -29,6 +29,10 @@ public class ReadConfig {
 		String url=pro.getProperty("Url");
 		return url;
 	}
+	public String getAppUrlNew() {
+		String url=pro.getProperty("NewUrl");
+		return url;
+	}
 	
 	public String getDataEntry_UserName() 
 	{
@@ -48,6 +52,10 @@ public class ReadConfig {
 
 	public String getPassword() {
 		String pass=pro.getProperty("Password");
+		return pass;
+	}
+	public String getPasswordNew() {
+		String pass=pro.getProperty("NewPass");
 		return pass;
 	}
 

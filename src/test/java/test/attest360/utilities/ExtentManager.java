@@ -18,7 +18,7 @@ public class ExtentManager {
 		String path=directory+fileName;
 		ExtentHtmlReporter htmlReporter =new ExtentHtmlReporter(path);
 		htmlReporter.config().setEncoding("utf-8");
-		htmlReporter.config().setDocumentTitle("BeeForce_Test_Report");
+		htmlReporter.config().setDocumentTitle("Attest360_Test_Report");
 		htmlReporter.config().setReportName("Functional_Test_Report");
 		htmlReporter.config().setTheme(Theme.STANDARD);
 

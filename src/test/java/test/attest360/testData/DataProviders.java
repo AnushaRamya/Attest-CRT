@@ -11,8 +11,8 @@ import test.attest360.utilities.ExcelUtils;
  *
  */
 public class DataProviders  {
+	
 	ExcelUtils obj=new ExcelUtils();
-
 	@DataProvider(name ="customerName")
 	public Object[][] set_Customer() {
 		//Totals rows count
@@ -29,17 +29,33 @@ public class DataProviders  {
 		return data;
 	}
 	
-	@DataProvider(name ="basicDetails")
-	public Object[][] set_BasicDetails() {
+	@DataProvider(name ="basicDetailsFresher")
+	public Object[][] set_BasicDetailsFresher() {
 		//Totals rows count
-		int rows=obj.getRowCount("Basic Details") ;
+		int rows=obj.getRowCount("Basic Details-Fresher") ;
 		//Total Columns
-		int column=obj.getColumnCount ("Basic Details") ;
+		int column=obj.getColumnCount ("Basic Details-Fresher") ;
 		int actRows=rows-1;
 		Object[][] data= new Object[actRows] [column];
 		for(int i=0;i<actRows;i++) {
 			for(int j=0; j<column;j++) {
-				data[i][j]=obj.getCellData("Basic Details", j, i+2);
+				data[i][j]=obj.getCellData("Basic Details-Fresher", j, i+2);
+			}
+		}
+		return data;			
+	 
+	}
+	@DataProvider(name ="basicDetailsExperienced")
+	public Object[][] set_BasicDetailsExperienced() {
+		//Totals rows count
+		int rows=obj.getRowCount("Basic Details-Experienced") ;
+		//Total Columns
+		int column=obj.getColumnCount ("Basic Details-Experienced") ;
+		int actRows=rows-1;
+		Object[][] data= new Object[actRows] [column];
+		for(int i=0;i<actRows;i++) {
+			for(int j=0; j<column;j++) {
+				data[i][j]=obj.getCellData("Basic Details-Experienced", j, i+2);
 			}
 		}
 		return data;			
@@ -62,21 +78,22 @@ public class DataProviders  {
 	 
 	}
 	@DataProvider(name ="FilldataEducation")
-	public Object[][] setFilldataEducationDetails() {
+	public Object[][] setFillDataEducation() {
 		//Totals rows count
-		int rows=obj.getRowCount("FillData-Education") ;
+		int rows=obj.getRowCount("FillDataEducation") ;
 		//Total Columns
-		int column=obj.getColumnCount ("FillData-Education") ;
+		int column=obj.getColumnCount ("FillDataEducation") ;
 		int actRows=rows-1;
 		Object[][] data= new Object[actRows] [column];
 		for(int i=0;i<actRows;i++) {
 			for(int j=0; j<column;j++) {
-				data[i][j]=obj.getCellData("FillData-Education", j, i+2);
+				data[i][j]=obj.getCellData("FillDataEducation", j, i+2);
 			}
 		}
 		return data;			
 	 
 	}
+	
 	@DataProvider(name ="FillDataAddress")
 	public Object[][] setFilldataAddress() {
 		//Totals rows count
@@ -125,6 +142,22 @@ public class DataProviders  {
 		return data;			
 	 
 	}
+	@DataProvider(name ="FillDataEmployment")
+	public Object[][] setFillEmployement() {
+		//Totals rows count
+		int rows=obj.getRowCount("FillData-Employement") ;
+		//Total Columns
+		int column=obj.getColumnCount ("FillData-Employement") ;
+		int actRows=rows-1;
+		Object[][] data= new Object[actRows] [column];
+		for(int i=0;i<actRows;i++) {
+			for(int j=0; j<column;j++) {
+				data[i][j]=obj.getCellData("FillData-Employement", j, i+2);
+			}
+		}
+		return data;			
+	 
+	}
 	@DataProvider(name ="Authorization")
 	public Object[][] setFillDataAuthorization() {
 		//Totals rows count
@@ -158,4 +191,67 @@ public class DataProviders  {
 	 
 	}
 	
+	
+	@DataProvider(name ="AutoComponentVerification")
+	public Object[][] setVerifierAuto() {
+		//Totals rows count
+		int rows=obj.getRowCount("Verifier validation") ;
+		//Total Columns
+		int column=obj.getColumnCount ("Verifier validation") ;
+		int actRows=rows-1;
+		Object[][] data= new Object[actRows] [column];
+		for(int i=0;i<actRows;i++) {
+			for(int j=0; j<column;j++) {
+				data[i][j]=obj.getCellData("Verifier validation", j, i+2);
+			}
+		}
+		return data;	
+	}
+	@DataProvider(name ="Insufficent")
+	public Object[][] setinsuff() {
+		//Totals rows count
+		int rows=obj.getRowCount("Insufficient") ;
+		//Total Columns
+		int column=obj.getColumnCount ("Insufficient") ;
+		int actRows=rows-1;
+		Object[][] data= new Object[actRows] [column];
+		for(int i=0;i<actRows;i++) {
+			for(int j=0; j<column;j++) {
+				data[i][j]=obj.getCellData("Insufficient", j, i+2);
+			}
+		}
+		return data;	
+	}
+	@DataProvider(name ="Rejection")
+	public Object[][] setRejection() {
+		//Totals rows count
+		int rows=obj.getRowCount("Rejection") ;
+		//Total Columns
+		int column=obj.getColumnCount ("Rejection") ;
+		int actRows=rows-1;
+		Object[][] data= new Object[actRows] [column];
+		for(int i=0;i<actRows;i++) {
+			for(int j=0; j<column;j++) {
+				data[i][j]=obj.getCellData("Rejection", j, i+2);
+			}
+		}
+		return data;	
+	}
+	@DataProvider(name ="CandidateFlow")
+	public Object[][] setCandidateFlow() {
+		//Totals rows count
+		int rows=obj.getRowCount("CandidateFlow") ;
+		//Total Columns
+		int column=obj.getColumnCount ("CandidateFlow") ;
+		int actRows=rows-1;
+		Object[][] data= new Object[actRows] [column];
+		for(int i=0;i<actRows;i++) {
+			for(int j=0; j<column;j++) {
+				data[i][j]=obj.getCellData("CandidateFlow", j, i+2);
+			}
+		}
+		return data;	
+	}
+	
 }
+

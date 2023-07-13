@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MultipleSuite">
+	<suite-files>
+		<suite-file path="StopBgvFlow1.xml"></suite-file>
+		<suite-file path="StopBgvFlow2.xml"></suite-file>
+		<suite-file path="StopBgvFlow3.xml"></suite-file>
+		<suite-file path="StopBgvFlow4.xml"></suite-file>
+		<suite-file path="StopBgvFlow5.xml"></suite-file>
+		<suite-file path="StopBgvFlow6.xml"></suite-file>
+	</suite-files>
+</suite>

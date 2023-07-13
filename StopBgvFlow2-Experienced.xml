@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="test.attest360.utilities.TestListeners" />
+	</listeners>
+	<test name="Test">
+		<parameter name="customerName" value="Billing Changes" />
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="test.attest360.testCases.Experienced">
+				<methods>
+					<include name="critirionDataEntryLogin"></include>
+					<include name="select_customer"></include>
+					<include name="enterBasicDetails"></include>
+					<include name="fillDataAuthorization"></include>
+					<include name="fillDataSetBasic"></include>
+					<include name="fillDataSetEducation"></include>
+					<include name="fillDataSetAddress"></include>
+					<include name="fillDataIdentificationVerification"></include>
+					<include name="fillDataEmployement"></include>
+					<include name="stopBgvFlow2"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
